@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+  
+   
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+	  background-color:#270014;
+	  font-size:26px;
+    }
+	/* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #270014;
+      padding: 30px;
+	  
+	  
+    }
+	</style>
+</head>
+<body  style="background-color:azure;">
+
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">C++ Tutorial Manual</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a  target="_blank" href="About.html">About</a></li>
+        <li><a  target="_blank" href="information.html">Information</a></li>
+       
+      </ul>
+	  	  <ul class="nav navbar-nav navbar-right">
+			<li ><a target="_blank" href="informations.html">Take a Quiz</a></li>  
+		</ul>
+    </div>
+  </div>
+</nav>
+
+
+  <div class="container">
+  <h1 style="font-family:Times New Roman; font-size:85px; color:chocolate; word-spacing:10px; text-align:center; ">Arrays</h1><br></br>
+  <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">C++ provides a data structure, “the array”, which stores a fixed-size sequential collection of elements of the same type. An array is used to store a 
+  collection of data, but it is often more useful to think of an array as a collection of variables of the same type.</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">Instead of declaring individual variables, such as number0, number1, ..., and number99, you declare one array variable such as numbers and use numbers[0],
+ numbers[1], and ..., numbers[99] to represent individual variables. A specific element in an array is accessed by an index.</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">All arrays consist of contiguous memory locations. The lowest address corresponds to the first element and the highest address to the last element.</p>
+<h1 style="font-family:Times New Roman; font-size:40px; color:chocolate; word-spacing:10px; text-align:center; ">Declaring Arrays</h1><br></br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">To declare an array in C++, the programmer specifies the type of the elements and the number of elements required by an array as follows −</p><br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">type arrayName [ arraySize ];</p></br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">This is called a single-dimension array. The “arraySize” must be an integer constant greater than zero and “type” can be any valid C++ data type.
+ For example, to declare a 10-element array called balance of type double, use this statement −</p><br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">double balance[10];</p></br>
+<h1 style="font-family:Times New Roman; font-size:40px; color:chocolate; word-spacing:10px; text-align:center; ">Initializing Arrays</h1><br></br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">You can initialize C++ array elements either one by one or using a single statement as follows −</p><br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">double balance[5] = {1000.0, 2.0, 3.4, 17.0, 50.0};</p></br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">The number of values between braces { } can not be larger than the number of elements that we declare for the array between square brackets [ ].
+ Following is an example to assign a single element of the array −</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">If you omit the size of the array, an array just big enough to hold the initialization is created. Therefore, if you write −</p><br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">double balance[] = {1000.0, 2.0, 3.4, 17.0, 50.0};</p></br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  "><br>You will create exactly the same array as you did in the previous example.</p>
+<br><p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">balance[4] = 50.0;</br></p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">The above statement assigns element number 5th in the array a value of 50.0. Array with 4th index will be 5th, i.e., last element because all arrays have
+ 0 as the index of their first element which is also called base index. Following is the pictorial representaion of the same array we discussed above −</p>
+ 
+<h1 style="font-family:Times New Roman; font-size:40px; color:chocolate; word-spacing:10px; text-align:center; ">Accessing Array Elements</h1><br></br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; "><br>An element is accessed by indexing the array name. This is done by placing the index of the element within square brackets after the name of the array.
+ For example −</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">double salary = balance[9];</p></br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">The above statement will take 10th element from the array and assign the value to salary variable. Following is an example, which will use all the 
+above-mentioned three concepts viz. declaration, assignment and accessing arrays −</p>
+
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">#include <iostream></p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">using namespace std;
+ </p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">#include <iomanip></p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">using std::setw;</p>
+ 
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">int main () {</p>
+
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">int n[ 10 ]; // n is an array of 10 integers</p>
+ 
+  <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; "> // initialize elements of array n to 0     </p>     
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">for ( int i = 0; i < 10; i++ ) {</p>
+      <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">n[ i ] = i + 100; // set element at location i to i + 100</p>
+  <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; "> }</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">cout << "Element" << setw( 13 ) << "Value" << endl;</p>
+ 
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">// output each array element's value </p>                     
+  <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  "> for ( int j = 0; j < 10; j++ ) {</p>
+      <p style="font-family:Times New Roman; font-size:30px; color:saddlebrown; word-spacing:10px;  ">cout << setw( 7 )<< j << setw( 13 ) << n[ j ] << endl;</p>
+  <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  "> }</p>
+ 
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">return 0;</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">}</p>
+
+
+  
+  
+  </div><br></br>
+  <footer class="container-fluid text-center">
+  <h2 style= "font-size:25px; color:white; align:center">Contact Information: sandipgurung@my.unt.edu</h2>
+     <p align="center"><a target="_blank" href="https://www.foliotek.me/sandipgurung" style="color:blue">Click here to view my eportfolio!</a></p>
+  <p style= "font-size:16px; color:white;" align="center"> Designed by: Sandip Gurung</p>
+    
+	  </footer>
+</body>
+</html>

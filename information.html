@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+  <style>
+  
+   
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+	  background-color:#270014;
+	  font-size:26px;
+    }
+	/* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #270014;
+      padding: 30px;
+	  
+	  
+    }
+	</style>
+</head>
+<body  style="background-color:azure;">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">C++ Tutorial Manual</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a  target="_blank" href="About.html">About</a></li>
+        <li><a  target="_blank" href="information.html">Information</a></li>
+       
+      </ul>
+	  
+	  <ul class="nav navbar-nav navbar-right">
+			<li ><a target="_blank" href="informations.html">Take a Quiz</a></li>  
+		</ul>
+    </div>
+  </div>
+</nav>
+   <br></br>
+  <div class="container">
+  
+<h1 style="font-family:Times New Roman; font-size:85px; color:chocolate; word-spacing:10px; text-align:center; ">  C++ Setup<h1> <br></br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">Before you start learning C++, it is very necessary to set up C++. We’ll be needed a two software’s to be installed in your computer.</p>
+<h2 style="font-family:Times New Roman; font-size:40px; color:chocolate; word-sapcing:10px; text-align:center; ">Text Editor<h2> <br></br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">To write a C++ program we’ll need a text editor for example we can try windows notepad, OS edit command, Epsilon or EMACS.
+It is necessary to know, what is source files? Source files are the created one files using text editor typically they are named with the extension of .cpp or .cp or .c.
+A text editor is where you’ll be writing all your code.</p>
+<h2 style="font-family:Times New Roman; font-size:40px; color:chocolate; word-sapcing:10px; text-align:center; ">C++ Compiler<h2> <br></br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">What is C++ Compiler? It is actually a compiler that compile your source code into final executable program. 
+The widely used and also freely available that people used is GNU C/C++ compiler. If you want to try something else you can havef either HP or
+ Solaris depending on which Operating System you are using. </p>
+<h2 style="font-family:Times New Roman; font-size:40px; color:chocolate; word-sapcing:10px; text-align:center; ">Installing GNU C/C++ Compiler<h2> <br></br>
+<h3 style="font-family:Times New Roman; font-size:40px; color:chocolate; word-sapcing:10px; text-align:center; ">UNIX/Linux Installation<h3> <br></br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">If you are using linux or UNIX you make sure 
+you have installed GCC which could be checked using this following command:</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">$ g++ -v </p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">If you have GCC on your computer then this following message should be printed out: </p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">Using built-in specs.</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">Target: 1386-redhat-linux</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">Configured with: ../configure –prefix=/usc……</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">Thread model” posix</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">Gcc version 4.1.2 20080704 (Red Hat 4.1.2-46)</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">If that messages is not showing up then GCC is not installed, then you will have to install it yourself. </p>
+<h3 style="font-family:Times New Roman; font-size:40px; color:chocolate; word-sapcing:10px; text-align:center; ">Mac OS X Installation</h3>  <br></br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">If you use Mac OS X, the easiest way to obtain GCC is to download the Xcode development environment from Apple's website 
+and follow the simple installation instructions.</p>
+
+<h3 style="font-family:Times New Roman; font-size:40px; color:chocolate; word-sapcing:10px; text-align:center; ">Windows Installation<h3><br></br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">If you use Windows OS then install MinGW. To install MinGW you can go to MinGW homepage then follow the instruction to download that page. 
+While installing MinGW, at a minimum, you must install gcc-core, gcc-g++, binutils, and the MinGW runtime, but you may wish to install more.
+Add the bin subdirectory of your MinGW installation to your PATH environment variable so that you can specify these tools on the command line by their simple names.
+After the installation is completed now you be able to run gcc or g++ or any other several GNU tools from Windows command line. </p>
+
+
+  
+  </div>
+   <br></br>
+  <footer class="container-fluid text-center">
+  <h2 style= "font-size:25px; color:white; align:center">Contact Information: sandipgurung@my.unt.edu</h2>
+     <p align="center"><a target="_blank" href="https://www.foliotek.me/sandipgurung" style="color:blue">Click here to view my eportfolio!</a></p>
+  <p style= "font-size:16px; color:white;" align="center"> Designed by: Sandip Gurung</p>
+    
+	  </footer>
+	 
+</body>
+</html>

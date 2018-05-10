@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+  
+   
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+	  background-color:#270014;
+	  font-size:26px;
+    }
+	/* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #270014;
+      padding: 30px;
+	  
+	  
+    }
+	</style>
+</head>
+<body  style="background-color:azure;">
+ <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">C++ Tutorial Manual</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a  target="_blank" href="About.html">About</a></li>
+        <li><a  target="_blank" href="information.html">Information</a></li>
+       
+      </ul>
+	  	  <ul class="nav navbar-nav navbar-right">
+			<li ><a target="_blank"  href="informations.html">Take a Quiz</a></li>  
+		</ul>
+    </div>
+  </div>
+</nav>
+
+
+  <div class="container">
+  
+  <h1 style="font-family:Times New Roman; font-size:85px; color:chocolate; word-spacing:10px; text-align:center; "> Pointers</h1><br></br>
+  
+  <p  style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">C++ pointers are easy and fun to learn. Some C++ tasks are performed more easily with pointers, and other C++ tasks, such as dynamic memory allocation,
+  cannot be performed without them.</p>
+<p  style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  "> As you know every variable is a memory location and every memory location has its address defined which can be accessed using ampersand (&) operator
+ which denotes an address in memory. Consider the following which will print the address of the variables defined − </p>
+ <br>
+<p  style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">#include <iostream></p>
+
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">using namespace std;</p>
+<p  style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">int main () {</p>
+   <p  style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">int  var1;</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">char var2[10];</p>
+
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">cout << "Address of var1 variable: ";</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">cout << &var1 << endl;</p>
+
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">cout << "Address of var2 variable: ";</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">cout << &var2 << endl;</p>
+
+   <p  style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">return 0;</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">}</p>
+</br>
+
+<p  style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  "><br>When the above code is compiled and executed, it produces the following result − </p></br>
+<p  style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  "><br>Address of var1 variable: 0xbfebd5c0</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">Address of var2 variable: 0xbfebd5b6</br></p>
+<h1 style="font-family:Times New Roman; font-size:40px; color:chocolate; word-spacing:10px; text-align:center; "><b>What are Pointers?</b><h1><br></br>
+<br>
+<p  style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">A “pointer” is a variable whose value is the address of another variable. Like any variable or constant, you must declare a pointer before you can 
+work with it. The general form of a pointer variable declaration is −</p></br>
+<p  style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  "><br>type *var-name;</br></p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">Here, “type” is the pointer's base type; it must be a valid C++ type and “var-name” is the name of the pointer variable. The asterisk you used to 
+declare a pointer is the same asterisk that you use for multiplication. However, in this statement the asterisk is being used to designate a 
+variable as a pointer. Following are the valid pointer declaration −</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  "><br>int    *ip;    // pointer to an integer</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">double *dp;    // pointer to a double</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">float  *fp;    // pointer to a float</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">char   *ch     // pointer to character</br></p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">The actual data type of the value of all pointers, whether integer, float, character, or otherwise, is the same, a long hexadecimal number that 
+represents a memory address. The only difference between pointers of different data types is the data type of the variable or constant that the 
+pointer points to.</p>
+<h1 style="font-family:Times New Roman; font-size:40px; color:chocolate; word-spacing:10px; text-align:center; "><b>Using Pointers in C++</b></h1><br></br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">There are few important operations, which we will do with the pointers very frequently. </p>
+<p  style="font-family:fantasy; font-size:30px; color:black; word-spacing:10px;  "><br>(a)	We define a pointer variable.</p>
+<p  style="font-family:fantasy; font-size:30px; color:black; word-spacing:10px;  ">(b)	 Assign the address of a variable to a pointer. </p>
+<p  style="font-family:fantasy; font-size:30px; color:black; word-spacing:10px;  ">(c)	Finally access the value at the address available in the pointer variable. This is done by using unary operator * that returns the 
+value of the variable located at the address specified by its operand. Following example makes use of these operations −</br></p>
+
+<p  style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">#include <iostream></p>
+
+<p  style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">using namespace std;</p>
+
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">int main () {</p>
+  <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  "> int  var = 20;   // actual variable declaration.</p>
+   <p  style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">int  *ip;        // pointer variable </p>
+
+   <p  style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">ip = &var;       // store address of var in pointer variable</p>
+
+   <p  style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">cout << "Value of var variable: ";</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">cout << var << endl;</p>
+
+   <p  style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">// print the address stored in ip pointer variable</p>
+  <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; "> cout << "Address stored in ip variable: ";</p>
+  <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  "> cout << ip << endl;</p>
+
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">// access the value at the address available in pointer</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">cout << "Value of *ip variable: ";</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">cout << *ip << endl;</p>
+
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">return 0;</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">}</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">When the above code is compiled and executed, it produces result something as follows −</p>
+<p  style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  "><br>Value of var variable: 20</br></p>
+<p  style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  "><br>Address stored in ip variable: 0xbfc601ac</br></p>
+<p  style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  "><br>Value of *ip variable: 20</br></p>
+
+<br>
+  </div><br></br>
+  <footer class="container-fluid text-center">
+  <h2 style= "font-size:25px; color:white; align:center">Contact Information: sandipgurung@my.unt.edu</h2>
+     <p align="center"><a target="_blank" href="https://www.foliotek.me/sandipgurung" style="color:blue">Click here to view my eportfolio!</a></p>
+  <p style= "font-size:16px; color:white;" align="center"> Designed by: Sandip Gurung</p>
+    
+	  </footer>
+</body>
+</html>

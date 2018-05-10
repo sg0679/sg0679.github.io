@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+  
+   
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+	  background-color:#270014;
+	  font-size:26px;
+    }
+	/* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #270014;
+      padding: 30px;
+	  
+	  
+    }
+	</style>
+</head>
+<body  style="background-color:azure;">
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">C++ Tutorial Manual</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a  target="_blank" href="About.html">About</a></li>
+        <li><a  target="_blank" href="information.html">Information</a></li>
+       
+      </ul>
+	  	  <ul class="nav navbar-nav navbar-right">
+			<li ><a target="_blank" href="informations.html">Take a Quiz</a></li>  
+		</ul>
+    </div>
+  </div>
+</nav>
+
+
+  <div class="container">
+  
+<h1 style="font-family:Times New Roman; font-size: 85px; color:chocolate; word-spacing:10px; text-align:center; "> Creating References</h1><br></br>
+<br>
+
+  <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  "> Think of a variable name as a label attached to the variable's location in memory. You can then think of a reference as a second label attached 
+  to that memory location. Therefore, you can access the contents of the variable through either the original variable name or the reference. 
+  For example, suppose we have the following example −</p>
+  <br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">int i = 17;</br></p>
+<br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">We can declare reference variables for i as follows.</br></p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  "><br>int& r = i;</p></br>
+
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">Read the & in these declarations as “reference”. Thus, read the first declaration as "r is an integer reference initialized to i" and read the
+ second declaration as "s is a double reference initialized to d.". Following example makes use of references on int and double −</p>
+
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; "><br>#include <iostream></br></p>
+ 
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">using namespace std;</p>
+ 
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">int main () {</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">// declare simple variables</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">int    i;</p>
+  <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  "> double d;</p>
+ 
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">// declare reference variables</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">int&    r = i;</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">double& s = d;</p>
+   
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">i = 5;</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">cout << "Value of i : " << i << endl;</p>
+  <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  "> cout << "Value of i reference : " << r  << endl;
+ </p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">d = 11.7;</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">cout << "Value of d : " << d << endl;</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">cout << "Value of d reference : " << s  << endl;</p>
+   
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">return 0;</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">}</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">When the above code is compiled together and executed, it produces the following result −</p>
+<br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">Value of i : 5</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">Value of i reference : 5</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">Value of d : 11.7</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">Value of d reference : 11.7</p>
+</br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">References are usually used for function argument lists and function return values. So following are two important subjects related to
+ C++ references which should be clear to a C++ programmer −</p>
+<h1 style="font-family:Times New Roman; font-size:40px; color:chocolate; word-spacing:10px; text-align:center; "><b>Concept & Description</b></h1><br></br>
+<br>
+ <p style="font-family:fantasy; font-size:30px; color:black; word-spacing:10px;  ">1	References as Parameters</p>
+ <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">C++ supports passing references as function parameter more safely than parameters.</p>
+<p style="font-family:fantasy; font-size:30px; color:black; word-spacing:10px;  ">2	Reference as Return Value</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">You can return reference from a C++ function like any other data type.</p>
+</br>
+<br>
+
+  </div><br></br>
+  <footer class="container-fluid text-center">
+  <h2 style= "font-size:25px; color:white; align:center">Contact Information: sandipgurung@my.unt.edu</h2>
+     <p align="center"><a target="_blank" href="https://www.foliotek.me/sandipgurung" style="color:blue">Click here to view my eportfolio!</a></p>
+  <p style= "font-size:16px; color:white;" align="center"> Designed by: Sandip Gurung</p>
+    
+	  </footer>
+</body>
+</html>

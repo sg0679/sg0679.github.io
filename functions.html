@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+    <style>
+  
+   
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+	  background-color:#270014;
+	  font-size:26px;
+    }
+	/* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #270014;
+      padding: 30px;
+	  
+	  
+    }
+	</style>
+</head>
+<body  style="background-color:azure;">
+
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">C++ Tutorial Manual</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a  target="_blank" href="About.html">About</a></li>
+        <li><a  target="_blank" href="information.html">Information</a></li>
+       
+      </ul>
+	  	  <ul class="nav navbar-nav navbar-right">
+			<li ><a target="_blank" href="informations.html">Take a Quiz</a></li>  
+		</ul>
+    </div>
+  </div>
+</nav>
+
+
+  <div class="container">
+  
+  <h1 style="font-family:Times New Roman; font-size:85px; color:chocolate; word-spacing:10px; text-align:center; ">Functions </h1><br></br>
+  
+ <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  "> A function is a group of statements that together perform a task. Every C++ program has at least one function, which is “main()”, and all the most trivial programs can define additional functions.</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">You can divide up your code into separate functions. How you divide up your code among different functions is up to you, but logically the division usually
+ is such that each function performs a specific task.</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">A function “declaration” tells the compiler about a function's name, return type, and parameters. A function “definition” provides the actual body of the
+ function.</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">The C++ standard library provides numerous built-in functions that your program can call. For example, function “strcat()” to concatenate two strings,
+ function “memcpy()” to copy one memory location to another location and many more functions.</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">A function is known with various names like a method or a sub-routine or a procedure etc.</p>
+<h1 style="font-family:Times New Roman; font-size:40px; color:chocolate; word-spacing:10px; text-align:center; ">Defining a Function</h1><br></br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">The general form of a C++ function definition is as follows − </p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">return_type function_name( parameter list ) {</p>
+  <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; "> body of the function</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">}</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">A C++ function definition consists of a function header and a function body. Here are all the parts of a function − </p>
+<p style="font-family:fantasy; font-size:30px; color:black; word-spacing:10px; ">•	Return Type − A function may return a value. The return_type is the data type of the value the function returns. Some functions perform the 
+desired operations without returning a value. In this case, the return_type is the keyword void.</p>
+<p style="font-family:fantasy; font-size:30px; color:black; word-spacing:10px;  ">•	Function Name − This is the actual name of the function. The function name and the parameter list together constitute the function signature.</p>
+<p style="font-family:fantasy; font-size:30px; color:black; word-spacing:10px;  ">•	Parameters − A parameter is like a placeholder. When a function is invoked, you pass a value to the parameter. This value is referred to as actual
+ parameter or argument. The parameter list refers to the type, order, and number of the parameters of a function. Parameters are optional; that is, a 
+ function may contain no parameters. </p>
+<p style="font-family:fantasy; font-size:30px; color:black; word-spacing:10px;  ">•	Function Body − The function body contains a collection of statements that define what the function does.</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">Example</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">Following is the source code for a function called “max()”. This function takes two parameters num1 and num2 and return the biggest of both −</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  " >// function returning the max between two numbers</p>
+ 
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">int max(int num1, int num2) {</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">// local variable declaration</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">int result;</p>
+ 
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">if (num1 > num2)</p>
+      <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">result = num1;</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">else</p>
+      <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">result = num2;</p>
+ 
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">return result; </p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">}</p>
+<h1 style="font-family:Times New Roman; font-size:40px; color:chocolate; word-spacing:10px; text-align:center; ">Function Declarations</h1><br></br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">A function “declaration” tells the compiler about a function name and how to call the function. The actual body of the function can be defined separately.</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">A function declaration has the following parts −</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">return_type function_name( parameter list );</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">For the above defined function max(), following is the function declaration −</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">int max(int num1, int num2);</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">Parameter names are not important in function declaration only their type is required, so following is also valid declaration −</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">int max(int, int);</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">Function declaration is required when you define a function in one source file and you call that function in another file. In such case, you should
+ declare the function at the top of the file calling the function.</p>
+<h1 style="font-family:Times New Roman; font-size:40px; color:chocolate; word-spacing:10px; text-align:center; ">Calling a Function</h1><br></br>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  " >While creating a C++ function, you give a definition of what the function has to do. To use a function, you will have to call or invoke that function.</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">When a program calls a function, program control is transferred to the called function. A called function performs defined task and when it’s return 
+statement is executed or when its function-ending closing brace is reached, it returns program control back to the main program.</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">To call a function, you simply need to pass the required parameters along with function name, and if function returns a value, then you can store returned 
+value. For example −</p>
+
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">#include <iostream></p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">using namespace std;</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">// function declaration</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">int max(int num1, int num2);</p>
+ 
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">int main () {</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">// local variable declaration:</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">int a = 100;</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">int b = 200;</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">int ret;</p>
+ 
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">// calling a function to get max value.</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">ret = max(a, b);</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">cout << "Max value is : " << ret << endl;</p>
+ 
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">return 0;</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">}</p>
+ 
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">// function returning the max between two numbers</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">int max(int num1, int num2) {</p>
+  <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  "> // local variable declaration</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">int result;</p>
+ 
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">if (num1 > num2)</p>
+      <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">result = num1;</p>
+   <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">else</p>
+      <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">result = num2;</p>
+ 
+  <p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; "> return result; </p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">}</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px;  ">I kept max() function along with main() function and compiled the source code. While running final executable, it would produce the following result −</p>
+<p style="font-family:fantasy; font-size:30px; color:saddlebrown; word-spacing:10px; ">Max value is : 200</p>
+
+
+  </div><br></br>
+  <footer class="container-fluid text-center">
+  <h2 style= "font-size:25px; color:white; align:center">Contact Information: sandipgurung@my.unt.edu</h2>
+     <p align="center"><a target="_blank" href="https://www.foliotek.me/sandipgurung" style="color:blue">Click here to view my eportfolio!</a></p>
+  <p style= "font-size:16px; color:white;" align="center"> Designed by: Sandip Gurung</p>
+    
+	  </footer>
+</body>
+</html>
